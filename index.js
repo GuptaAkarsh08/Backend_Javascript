@@ -39,7 +39,7 @@ githubData= {
     "updated_at": "2024-02-12T12:11:50Z"
 }
 
-app.get('/home',(req,res) =>{
+app.get('/',(req,res) =>{
 res.send('Hello World')
 })
 
