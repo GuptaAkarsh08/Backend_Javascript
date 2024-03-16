@@ -1,8 +1,8 @@
-const express = require('express')
+import Express from "express";
+import { githubData } from "./githubdata";
 require('dotenv').config()
 
-const app = express()
-const port = process.env
+const port = process.env.PORT || 5000
 
 githubData= {
     "login": "hiteshchoudhary",
@@ -39,19 +39,14 @@ githubData= {
     "updated_at": "2024-02-12T12:11:50Z"
 }
 
-app.get('/',(req,res) =>{
-res.send('Hello World')
+app.get('/',(req,res) => {
+ res.send('<h1>Hello World</h1>')
 })
 
-
-app.get('/login', (req, res) =>  {
-    res.send('<h1>Please login before accessing the website</h1>'
-    )})
-
 app.get('/user',(req,res) => {
-    res.json(githubData)
-})    
+ res.json(githubData)
+})
 
-app.listen(port,() => {
+app.listen(port,(req,res) => {
     console.log('Server is Up and Running!!!')
 })
