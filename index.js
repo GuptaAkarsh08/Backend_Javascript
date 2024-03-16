@@ -1,10 +1,13 @@
 import Express from "express";
-import { githubData } from "./githubdata";
-require('dotenv').config()
+import dotenv from 'dotenv';
+
 
 const port = process.env.PORT || 5000
+dotenv.config()
 
-githubData= {
+const app = Express()
+
+const githubData= {
     "login": "hiteshchoudhary",
     "id": 11613311,
     "node_id": "MDQ6VXNlcjExNjEzMzEx",

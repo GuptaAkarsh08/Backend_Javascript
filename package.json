@@ -10,6 +10,7 @@
   "keywords": [
     "node"
   ],
+  "type": "module",
   "author": "Akarsh Gupta",
   "license": "ISC",
   "dependencies": {
